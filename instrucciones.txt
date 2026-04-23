@@ -1,0 +1,53 @@
+Para esta cuarta practica vamos a realizar un clon funcional de la red social de twitter.
+
+
+
+Demo: https://frontend-p4.vercel.app/
+
+Api: https://backend-p4-klvc.onrender.com
+
+Documentación: https://backend-p4-klvc.onrender.com/api/docs/
+
+Diseños: https://excalidraw.com/#json=EnqhViEY3tIiGHibLjiaS,djGmesHrQ5eyqeDaN9lHsA
+
+
+
+Estructura de la página
+La web deberá tener un layout general donde tengamos una cabecera comun, desde ella tendremos un enlace al perfil del usuario.
+
+
+
+Página principal
+Esta página hara mención a la home de twitter donde podremos ver los ultimos post. La pagina deberá usar la paginación de la api para poder ver todos los resultados. Cada post tendrá dos botones de interacción para dar like o hacer retweet, si se pulsa dentro del post deberá enlazar con la página de post para ver el detalle
+
+Además se podrá publicar un post en esta misma página.
+
+
+
+Detalle del post
+Esta página mostrará el detalle completo de un post seleccionado, incluyendo su contenido, autor, fecha de publicación y el número de likes y retweets. También permitirá interactuar con el post mediante los botones de like y retweet. Debajo del post se listarán todos los comentarios realizados por otros usuarios y habrá un formulario para poder comentar. 
+
+
+
+Página del perfil
+Esta página mostrará el perfil de un usuario con su nombre de usuario, bio y estadísticas de seguidores y seguidos. Incluirá un botón para seguir o dejar de seguir a dicho usuario. Debajo del perfil se listarán todos sus posts ordenados de más reciente a más antiguo, con paginación. Cada post mostrará los botones de like y retweet, y al pulsar sobre él enlazará con la página de detalle del post. 
+
+
+
+Página de login o registro
+Esta página permitirá a los usuarios iniciar sesión o crear una cuenta nueva. Contendrá dos formularios: uno de login con email y contraseña, y otro de registro con username, email y contraseña. Un botón de cambio permitirá alternar entre ambos formularios sin necesidad de navegar a otra página. Al completar el registro o el login correctamente, se guardará el token JWT y se redirigirá automáticamente a la home.
+
+
+
+Menciones a tener en cuenta
+Todos los endpoints necesitarán de un header especial que será x-nombre con el nombre del alumno, esto es un requisito indispensable para poder evaluar la práctica, si en la base de datos no veo vuestro nombre supondrá un 0 directo
+Salvo los endpoints de crear cuenta e iniciar sesión todos necesitaran enviar una cabecera de autentificacion del siguiente modo Authorization: Bearer <token>
+En caso de no tener token de auth en las cookies, se deberá usar la funcion de proxy del next para mandar al usuario al login
+
+
+Instrucciones de Entrega
+El código debe estar en el repositorio de GitHub.
+El README.md debe incluir:
+Instrucciones de instalación (npm install) y arranque (npm run dev).
+Explicación de cómo se ha estructurado la navegación y cómo se han resuelto los problemas con los datos anidados de la API.
+Restricción: No está permitido el uso de IA generativa para resolver la actividad.
